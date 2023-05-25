@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form</title>
+  <script>
+    function validateForm() {
+      // Get the input values
+      var firstName = document.getElementById("firstName").value;
+      var lastName = document.getElementById("lastName").value;
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+      var confirmPassword = document.getElementById("confirmPassword").value;
+
+      // Check if any field is empty
+      if (firstName.trim() === "" || lastName.trim() === "" || email.trim() === "" || password === "" || confirmPassword === "") {
+        alert("Please fill in all fields.");
+        return false;
+      }
+
+      // Check if password and confirm password match
+      if (password !== confirmPassword) {
+        alert("Passwords do not match.");
+        return false;
+      }
+
+      // Perform additional validation if needed
+      // For example, checking the email format or password strength
+
+      // If all validations pass, return true to submit the form
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <form onsubmit="return validateForm()">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName"><br>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName"><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password"><br>
+
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword"><br>
+
+    <input type="submit" value="Register">
+  </form>
+</body>
+</html>
