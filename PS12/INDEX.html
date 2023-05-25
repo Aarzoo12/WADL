@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Registration Form</title>
+  <style>
+    body {
+      background-color: #f1f1f1;
+      font-family: Arial, sans-serif;
+    }
+    
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .container h2 {
+      text-align: center;
+      color: #3498db;
+    }
+    
+    .container input[type="text"],
+    .container input[type="password"],
+    .container input[type="email"],
+    .container select,
+    .container textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+    }
+    
+    .container input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #3498db;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+    
+    .container input[type="submit"]:hover {
+      background-color: #2186c4;
+    }
+    
+    .container p {
+      text-align: center;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>User Registration Form</h2>
+    <form>
+      <input type="text" placeholder="Name" required>
+      <input type="password" placeholder="Password" required>
+      <input type="email" placeholder="E-mail" required>
+      
+      <label for="phone">Phone Number:</label>
+      <select id="countryCode" name="countryCode">
+        <option value="+1">+1</option>
+        <option value="+91">+91</option>
+        <option value="+44">+44</option>
+        <!-- Add more country codes as needed -->
+      </select>
+      <input type="text" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" placeholder="Mobile Number (10 digits)" required>
+      
+      <label for="sex">Sex:</label>
+      <label><input type="radio" name="sex" value="male">Male</label>
+      <label><input type="radio" name="sex" value="female">Female</label>
+      
+      <label for="dob">Date of Birth:</label>
+      <select id="day" name="day">
+        <!-- Add options for days -->
+      </select>
+      <select id="month" name="month">
+        <!-- Add options for months -->
+      </select>
+      <select id="year" name="year">
+        <!-- Add options for years -->
+      </select>
+      
+      <label for="languages">Languages Known:</label>
+      <label><input type="checkbox" name="languages" value="english">English</label>
+      <label><input type="checkbox" name="languages" value="marathi">Marathi</label>
+      <label><input type="checkbox" name="languages" value="hindi">Hindi</label>
+      <label><input type="checkbox" name="languages" value="tamil">Tamil</label>
