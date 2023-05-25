@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Stylesheets Example</title>
+  
+  <!-- Inline Style -->
+  <style>
+    h1 {
+      color: red;
+      text-align: center;
+    }
+    
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+  </style>
+  
+  <!-- Internal Style -->
+  <style>
+    .container {
+      width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f2f2f2;
+      border-radius: 5px;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4caf50;
+      border: none;
+      color: #ffffff;
+      font-size: 16px;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+    
+    .btn:hover {
+      background-color: #45a049;
+    }
+  </style>
+  
+  <!-- External Style -->
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Styling with CSS</h1>
+    <p>This is an example of inline, internal, and external style sheets.</p>
+    
+    <button class="btn">Click Me</button>
+  </div>
+</body>
+</html>

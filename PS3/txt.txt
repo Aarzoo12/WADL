@@ -1,0 +1,7 @@
+The user fills out the registration form in index.html.
+The JavaScript code in script.js captures the form submission event, collects the form inputs, creates a user object, and sends it to the server using the AJAX POST method.
+The PHP script in registration.php receives the user data, validates it, and returns a success response.
+If the registration is successful, the JavaScript code in script.js redirects the user to the data-list.html page.
+On the data-list.html page, the JavaScript code in data.js fetches the user data from the server using the AJAX GET method.
+The PHP script in users.php returns a list of user data as a JSON response.
+The JavaScript code in data.js receives the user data, generates HTML list items, and displays them on the data-list.html page.

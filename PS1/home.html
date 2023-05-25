@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ecommerce Landing Page</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #161616;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  background-image: url('hero-image.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+ 
+}
+</style>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Cart</a></li>
+        <li><a href="#">Account</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Our Ecommerce Store</h1>
+      <p>Discover a wide range of products for every need.</p>
+      <a href="#" class="btn">Shop Now</a>
+    </div>
+  </section>
+
+  <section class="featured-products">
+    <h2>Featured Products</h2>
+    <div class="product-list">
+      <div class="product">
+        <img src="product1.jpg" alt="Product 1">
+        <h3>Product 1</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <a href="#" class="btn">View Details</a>
+      </div>
+      <div class="product">
+        <img src="product2.jpg" alt="Product 2">
+        <h3>Product 2</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <a href="#" class="btn">View Details</a>
+      </div>
+      <div class="product">
+        <img src="product3.jpg" alt="Product 3">
+        <h3>Product 3</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <a href="#" class="btn">View Details</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Ecommerce Store. All rights reserved.</p>
+  </footer>
+</body>
+</html>
