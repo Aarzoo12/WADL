@@ -1,0 +1,10 @@
+mkdir filename
+cd filename
+touch note.txt (ye file khol ke ismai kuch to bhi data daal de na)
+git init
+git status
+git add note.txt
+git commit -m "File has been updated"
+git log
+git remote add origin https://github.com/
+git push -u origin master

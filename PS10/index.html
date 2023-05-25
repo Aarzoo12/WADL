@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <style>
+    body {
+      background-color: #f1f1f1;
+      font-family: Arial, sans-serif;
+    }
+    
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .container h2 {
+      text-align: center;
+      color: #3498db;
+    }
+    
+    .container input[type="text"],
+    .container input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+    }
+    
+    .container input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #3498db;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+    
+    .container input[type="submit"]:hover {
+      background-color: #2186c4;
+    }
+    
+    .container p {
+      text-align: center;
+      margin-top: 10px;
+    }
+    
+    .error-message {
+      color: red;
+      font-size: 0.8em;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Login</h2>
+    <form onsubmit="return validateForm()">
+      <input type="text" id="username" placeholder="Username" required>
+      <span id="username-error" class="error-message"></span>
+      <input type="password" id="password" placeholder="Password" required>
+      <span id="password-error" class="error-message"></span>
+      <input type="submit" value="Login">
+    </form>
+    <p>Don't have an account? <a href="#">Register here</a></p>
+  </div>
+  
+  <script>
+    function validateForm() {
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+      
+      // Validate username
+      var usernameRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+      if (!usernameRegex.test(username)) {
+        document.getElementById('username-error').textContent = "Username must contain at least one uppercase letter, one lowercase letter, one special character, one number, and should be at least 8 characters long.";
+        return false;
+      }
+      document.getElementById('username-error').textContent = "";
+      
+      // Validate password
+      var passwordRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
+      if (!passwordRegex.test(password)) {
+        document.getElementById('password-error').textContent = "Password must contain at least one uppercase letter, one special character, and should be at least 8 characters long.";
+        return false;
+      }
+      document.getElementById('password-error').textContent = "";
+      
+      return true;
+    }
+  </script
